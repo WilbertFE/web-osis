@@ -3,7 +3,7 @@ import { LayoutWrapper } from "./components/LayoutWrapper";
 export default async function page({
   params,
 }: {
-  params: { username: string };
+  params: Promise<{ username: string }>;
 }) {
   const { username } = await params;
 
