@@ -24,7 +24,7 @@ export function Navigation() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image width={64} height={64} src="/logo.png" alt="Flowbite Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             OSIS
           </span>
         </div>
@@ -37,7 +37,7 @@ export function Navigation() {
                   callbackUrl: "/",
                 })
               }
-              className="px-8 cursor-pointer py-0.5 flex items-center gap-x-2 font-bold border-2 border-black dark:border-white uppercase bg-white text-black transition duration-200 text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
+              className="px-4 cursor-pointer py-0.5 flex items-center gap-x-2 font-bold border-2 border-black dark:border-white uppercase bg-white text-black transition duration-200 text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
             >
               <FcGoogle size={32} />
               Login
