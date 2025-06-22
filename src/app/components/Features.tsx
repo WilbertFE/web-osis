@@ -1,13 +1,7 @@
 "use client";
 
 import { TracingBeamDemo } from "@/components/blocks/tracing-beam-demo";
-
-type Dummy = {
-  title: string;
-  badge: string;
-  image: string;
-  description: string;
-};
+import { Dummy } from "../types/Dummy";
 
 export default function Features() {
   const dummyContent: Dummy[] = [

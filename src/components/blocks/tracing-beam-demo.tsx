@@ -6,13 +6,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Button } from "@/components/ui/button";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
-
-type Dummy = {
-  title: string;
-  badge: string;
-  image: string;
-  description: string;
-};
+import { Dummy } from "@/app/types/Dummy";
 
 export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
   const { status } = useSession();
