@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { Badge } from "@/components/ui/badge";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 type Visi = {
   title: string;
@@ -40,6 +41,18 @@ export default function Hero() {
     },
   ];
 
+  const words = [
+    {
+      text: "PELAJARI",
+    },
+    {
+      text: "WEB",
+    },
+    {
+      text: "INI",
+    },
+  ];
+
   return (
     <div className="w-full mt-32 flex flex-col min-h-screen rounded-b-md">
       <div className="z-10 -mb-8 h-full flex flex-col justify-center items-center">
@@ -67,9 +80,9 @@ export default function Hero() {
           ))}
         </div>
         <div className="my-4"></div>
-        <Link href="/">
+        <Link href="#features">
           <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-bold transition duration-200 ease-linear">
-            PELAJARI WEB INI
+            <TypewriterEffect words={words} />
           </button>
         </Link>
       </div>

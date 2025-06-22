@@ -2,6 +2,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/app/components/Navigation";
 import { SessionProvider } from "next-auth/react";
+import Footer from "./Footer";
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -15,6 +16,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
         >
           <Navigation />
           {children}
+          <Footer />
         </ThemeProvider>
       </SessionProvider>
     </>

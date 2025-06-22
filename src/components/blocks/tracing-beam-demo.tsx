@@ -3,15 +3,25 @@ import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
+import { toast } from "sonner";
 
 type Dummy = {
   title: string;
-  description: React.JSX.Element;
   badge: string;
   image: string;
+  description: string;
 };
 
 export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
+  const { status } = useSession();
+
+  const handleClick = () => {
+    if (status === "unauthenticated") {
+      toast("Login terlebih dahulu sebelum mengakses fitur");
+    }
+  };
   return (
     <TracingBeam className="px-12">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
@@ -21,7 +31,9 @@ export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
               {item.badge}
             </h2>
 
-            <p className={twMerge("text-xl mb-4")}>{item.title}</p>
+            <p className={twMerge("text-xl mb-4 font-bold tracking-wider")}>
+              {item.title}
+            </p>
 
             <div className="text-sm  prose prose-sm dark:prose-invert">
               {item?.image && (
@@ -30,11 +42,18 @@ export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
                   alt="blog thumbnail"
                   height="1000"
                   width="1000"
-                  className="rounded-lg mb-10 object-cover"
+                  className="rounded-lg mb-4 object-cover"
                 />
               )}
-              {item.description}
+              <p className="mb-2">{item.description}</p>
             </div>
+            <Button
+              variant="secondary"
+              className="font-bold tracking-wider"
+              onClick={handleClick}
+            >
+              Coba di sini
+            </Button>
           </div>
         ))}
       </div>

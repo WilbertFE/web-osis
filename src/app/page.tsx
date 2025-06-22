@@ -1,5 +1,5 @@
 "use client";
-import CountUsers from "./components/CountUsers";
+import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Testimonial from "./components/Testimonial";
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CountUsers />
+      <Features />
       <Testimonial />
     </>
   );
