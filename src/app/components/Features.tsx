@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { TracingBeamDemo } from "@/components/blocks/tracing-beam-demo";
-import { Dummy } from "../types/Dummy";
 
 export default function Features() {
-  const dummyContent: Dummy[] = [
+  const dummyContent: any = [
     {
       title: "Anonymous Report",
       badge: "Integritas",

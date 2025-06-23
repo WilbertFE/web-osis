@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -6,9 +7,8 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Button } from "@/components/ui/button";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
-import { Dummy } from "@/app/types/Dummy";
 
-export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
+export function TracingBeamDemo({ dummyContent }: { dummyContent: any }) {
   const { status } = useSession();
 
   const handleClick = () => {
@@ -19,7 +19,7 @@ export function TracingBeamDemo({ dummyContent }: { dummyContent: Dummy[] }) {
   return (
     <TracingBeam className="px-12">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-        {dummyContent.map((item, index) => (
+        {dummyContent.map((item: any, index: number) => (
           <div key={`content-${index}`} className="mb-10">
             <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
