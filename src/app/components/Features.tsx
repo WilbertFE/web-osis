@@ -6,7 +6,7 @@ import { TracingBeamDemo } from "@/components/blocks/tracing-beam-demo";
 export default function Features() {
   const dummyContent: any = [
     {
-      title: "Anonymous Report",
+      title: "Room Report",
       badge: "Integritas",
       image: "/fotbar.jpeg",
       description: "Melaporkan masalah secara anonim maupun langsung.",

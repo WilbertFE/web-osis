@@ -127,3 +127,28 @@ export async function updateUserData(
     };
   }
 }
+
+// report room
+export async function normalReport(
+  name: FormDataEntryValue,
+  room: FormDataEntryValue,
+  report: FormDataEntryValue
+) {
+  const data = { name, room, report };
+  await addDoc(collection(firestore, "reports-normal"), {
+    ...data,
+    created_at: Timestamp.now(),
+    updated_at: Timestamp.now(),
+  });
+  return { status: true, message: "Laporan berhasil dikirim" };
+}
+
+export async function anonymousReport(report: FormDataEntryValue) {
+  const data = { report };
+  await addDoc(collection(firestore, "reports-anonymous"), {
+    ...data,
+    created_at: Timestamp.now(),
+    updated_at: Timestamp.now(),
+  });
+  return { status: true, message: "Laporan berhasil dikirim" };
+}
