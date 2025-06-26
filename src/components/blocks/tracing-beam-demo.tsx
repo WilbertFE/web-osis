@@ -7,6 +7,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { Button } from "@/components/ui/button";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 export function TracingBeamDemo({ dummyContent }: { dummyContent: any }) {
   const { status } = useSession();
@@ -45,8 +46,11 @@ export function TracingBeamDemo({ dummyContent }: { dummyContent: any }) {
               variant="secondary"
               className="font-bold tracking-wider"
               onClick={handleClick}
+              asChild
             >
-              Coba di sini
+              <Link href={status === "authenticated" ? `${item.href}` : "/"}>
+                Coba di sini
+              </Link>
             </Button>
           </div>
         ))}

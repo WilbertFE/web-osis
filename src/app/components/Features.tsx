@@ -10,12 +10,14 @@ export default function Features() {
       badge: "Integritas",
       image: "/fotbar.jpeg",
       description: "Melaporkan masalah secara anonim maupun langsung.",
+      href: "/report",
     },
     {
       title: "Discussion Forum",
       badge: "Solidaritas",
       image: "/solidaritas.jpeg",
       description: "Memberi ruang untuk pelajar berdiskusi.",
+      href: "/discuss",
     },
     {
       title: "Aspiration Space",
@@ -23,6 +25,7 @@ export default function Features() {
       image: "/solidaritas.jpeg",
       description:
         "Ruang untuk memberi aspirasi, permintaan terkait apapun ke OSIS.",
+      href: "/aspiration",
     },
   ];
 
