@@ -1,12 +1,12 @@
 "use client";
 import Features from "./components/Features";
-import Hero from "./components/Hero";
 import Testimonial from "./components/Testimonial";
+import { ThreeDMarqueeDemoSecond } from "./components/ThreeDMarqueeDemoSecond";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <ThreeDMarqueeDemoSecond />
       <Features />
       <Testimonial />
     </>

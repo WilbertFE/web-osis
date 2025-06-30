@@ -54,7 +54,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="w-full mt-32 flex flex-col min-h-screen rounded-b-md">
+    <div className="w-full z-[999] mt-32 flex flex-col min-h-screen rounded-b-md">
       <div className="z-10 -mb-8 h-full flex flex-col justify-center items-center">
         <Highlight className="text-3xl font-bold tracking-wider bg-gradient-to-r from-biruMuda1 to-ungu px-1 rounded-lg">
           SIKAT
