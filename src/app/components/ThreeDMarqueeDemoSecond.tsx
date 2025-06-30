@@ -37,7 +37,7 @@ export function ThreeDMarqueeDemoSecond() {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
+    <div className="relative mx-auto mt-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
       <Hero />
 
       {/* overlay */}

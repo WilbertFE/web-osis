@@ -24,9 +24,6 @@ export function Navigation() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image width={64} height={64} src="/logo.png" alt="Flowbite Logo" />
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            OSIS
-          </span>
         </div>
         <div className="flex gap-x-1 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {status === "unauthenticated" && (
@@ -110,14 +107,20 @@ export function Navigation() {
                 Services
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Contact
-              </a>
-            </li>
+            {status === "unauthenticated" && (
+              <li>
+                <div
+                  onClick={() =>
+                    signIn("google", {
+                      callbackUrl: "/",
+                    })
+                  }
+                  className="block py-2 px-3 text-blue-600 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Login
+                </div>
+              </li>
+            )}
           </ul>
         </div>
       </div>
