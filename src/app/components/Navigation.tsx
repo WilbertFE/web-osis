@@ -28,7 +28,7 @@ export function Navigation() {
             OSIS
           </span>
         </div>
-        <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex gap-x-1 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {status === "unauthenticated" && (
             <button
               type="button"

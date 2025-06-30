@@ -152,3 +152,19 @@ export async function anonymousReport(report: FormDataEntryValue) {
   });
   return { status: true, message: "Laporan berhasil dikirim" };
 }
+
+// aspiration space
+
+export async function aspirationRequest(
+  name: FormDataEntryValue,
+  room: FormDataEntryValue,
+  request: FormDataEntryValue
+) {
+  const data = { name, room, request };
+  await addDoc(collection(firestore, "aspirations"), {
+    ...data,
+    created_at: Timestamp.now(),
+    updated_at: Timestamp.now(),
+  });
+  return { status: true, message: "Permintaan berhasil dikirim" };
+}

@@ -1,5 +1,5 @@
 "use client";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,14 +23,13 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { anonymousReport, normalReport } from "@/lib/firebase/service";
+import { aspirationRequest } from "@/lib/firebase/service";
+import { useRef } from "react";
 
 export function TabsDemo() {
   const [isLoading, setIsLoading] = useState(true);
   const [isNormalButtonLoad, setIsNormalButtonLoad] = useState(false);
-  const [isAnonymousButtonLoad, setIsAnonymousButtonLoad] = useState(false);
-  const formRefNormal = useRef<HTMLFormElement>(null);
-  const formRefAnonymous = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     setIsLoading(false);
@@ -43,38 +42,16 @@ export function TabsDemo() {
     const data = new FormData(e.currentTarget);
     const name = data.get("name");
     const room = data.get("room");
-    const report = data.get("report");
+    const request = data.get("request");
 
-    if (!name || !room || !report) return toast("Tidak boleh ada yang kosong");
+    if (!name || !room || !request) return toast("Tidak boleh ada yang kosong");
 
-    const response = await normalReport(name, room, report);
+    const response = await aspirationRequest(name, room, request);
 
     setIsNormalButtonLoad(false);
     if (response.status) {
-      formRefNormal.current?.reset();
+      formRef.current?.reset();
       return toast(response.message);
-    } else {
-      return toast("Gagal mengirim laporan");
-    }
-  };
-
-  const handleSubmitAnonymous = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsAnonymousButtonLoad(true);
-
-    const data = new FormData(e.currentTarget);
-    const report = data.get("report");
-
-    if (!report) return toast("Tidak boleh ada yang kosong");
-
-    const response = await anonymousReport(report);
-
-    setIsAnonymousButtonLoad(false);
-    if (response.status) {
-      formRefAnonymous.current?.reset();
-      return toast(response.message);
-    } else {
-      return toast("Gagal mengirim laporan");
     }
   };
 
@@ -85,15 +62,14 @@ export function TabsDemo() {
       <Tabs defaultValue="normal">
         <TabsList className="mx-auto">
           <TabsTrigger value="normal">Normal</TabsTrigger>
-          <TabsTrigger value="anonymous">Anonymous</TabsTrigger>
         </TabsList>
         <TabsContent value="normal">
-          <form ref={formRefNormal} onSubmit={(e) => handleSubmitNormal(e)}>
+          <form ref={formRef} onSubmit={(e) => handleSubmitNormal(e)}>
             <Card>
               <CardHeader>
-                <CardTitle>Normal Report</CardTitle>
+                <CardTitle>Aspiration Space</CardTitle>
                 <CardDescription>
-                  Buat laporan dengan identitas.
+                  Beri tahu permintaan dan harapanmu
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-6">
@@ -129,11 +105,11 @@ export function TabsDemo() {
                 </div>
                 <div className="grid gap-3">
                   <div className="grid w-full gap-3">
-                    <Label htmlFor="report">Laporan</Label>
+                    <Label htmlFor="request">Permintaan</Label>
                     <Textarea
-                      placeholder="Tulis laporan dengan lengkap"
-                      id="report"
-                      name="report"
+                      placeholder="Tulis permintaan dengan lengkap"
+                      id="request"
+                      name="request"
                     />
                   </div>
                 </div>
@@ -141,39 +117,6 @@ export function TabsDemo() {
               <CardFooter>
                 <Button
                   disabled={isNormalButtonLoad ? true : false}
-                  type="submit"
-                >
-                  Kirim
-                </Button>
-              </CardFooter>
-            </Card>
-          </form>
-        </TabsContent>
-        <TabsContent value="anonymous">
-          <form
-            ref={formRefAnonymous}
-            onSubmit={(e) => handleSubmitAnonymous(e)}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Anonymous Report</CardTitle>
-                <CardDescription>Buat laporan tanpa identitas.</CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-6">
-                <div className="grid gap-3">
-                  <div className="grid w-full gap-3">
-                    <Label htmlFor="report">Laporan</Label>
-                    <Textarea
-                      placeholder="Tulis laporan dengan lengkap"
-                      id="report"
-                      name="report"
-                    />
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  disabled={isAnonymousButtonLoad ? true : false}
                   type="submit"
                 >
                   Kirim

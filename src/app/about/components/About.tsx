@@ -18,10 +18,8 @@ export default function About() {
       title: "OSIS Periode 2024/2025",
       description: (
         <>
-          <p>
-            Pada 28 Oktober 2024, OSIS SMAS Methodist-6 Medan dilantik dan resmi
-            beroperasi.
-          </p>
+          Pada 28 Oktober 2024, OSIS SMAS Methodist-6 Medan dilantik dan resmi
+          beroperasi.
         </>
       ),
       badge: "Pelantikan - 28 Oktober 2024",
@@ -32,11 +30,9 @@ export default function About() {
       title: "OSIS Periode 2023/2024",
       description: (
         <>
-          <p>
-            Mengwujudkan SIKAT pada SMAS Methodist-6 Medan. Dengan mewujudkan
-            siswa yang solid, berintegritas, kreatif, berakhlak mulia, dan
-            mengaplikasikan teknologi.
-          </p>
+          Mengwujudkan SIKAT pada SMAS Methodist-6 Medan. Dengan mewujudkan
+          siswa yang solid, berintegritas, kreatif, berakhlak mulia, dan
+          mengaplikasikan teknologi.
         </>
       ),
       badge: "Harapan 1 tahun ke depan",
