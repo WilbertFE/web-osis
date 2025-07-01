@@ -1,14 +1,18 @@
 "use client";
-import Features from "./components/Features";
+import { AccordionDemo } from "./components/AccordionDemo";
+import { DraggableCardDemo } from "./components/DraggableCardDemo";
 import Testimonial from "./components/Testimonial";
 import { ThreeDMarqueeDemoSecond } from "./components/ThreeDMarqueeDemoSecond";
+import { TimelineDemo } from "./components/TimelineDemo";
 
 export default function Home() {
   return (
     <>
       <ThreeDMarqueeDemoSecond />
-      <Features />
+      <TimelineDemo />
+      <DraggableCardDemo />
       <Testimonial />
+      <AccordionDemo />
     </>
   );
 }
