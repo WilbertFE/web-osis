@@ -45,7 +45,10 @@ export function TabsDemo() {
     const room = data.get("room");
     const report = data.get("report");
 
-    if (!name || !room || !report) return toast("Tidak boleh ada yang kosong");
+    if (!name || !room || !report) {
+      setIsNormalButtonLoad(false);
+      return toast("Tidak boleh ada yang kosong");
+    }
 
     const response = await normalReport(name, room, report);
 
@@ -65,7 +68,10 @@ export function TabsDemo() {
     const data = new FormData(e.currentTarget);
     const report = data.get("report");
 
-    if (!report) return toast("Tidak boleh ada yang kosong");
+    if (!report) {
+      setIsAnonymousButtonLoad(false);
+      return toast("Tidak boleh ada yang kosong");
+    }
 
     const response = await anonymousReport(report);
 

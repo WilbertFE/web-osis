@@ -9,7 +9,13 @@ import { GridBackgroundDemo } from "./GridBackgroundDemo";
 export function AccordionDemo() {
   return (
     <GridBackgroundDemo>
-      <div className="z-[1]">
+      <div className="z-[1] w-[250px]">
+        <h1 className="text-center font-bold text-3xl tracking-wide">
+          Pertanyaan Umum
+        </h1>
+        <p className="text-sm text-center mb-4 text-foreground-400">
+          terkait web ini
+        </p>
         <Accordion
           type="single"
           collapsible
@@ -17,7 +23,7 @@ export function AccordionDemo() {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger>Product Information</AccordionTrigger>
+            <AccordionTrigger>Apa tujuan web ini?</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 Our flagship product combines cutting-edge technology with sleek
@@ -32,7 +38,9 @@ export function AccordionDemo() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Shipping Details</AccordionTrigger>
+            <AccordionTrigger>
+              Kenapa saya tidak bisa mengakses fitur?
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 We offer worldwide shipping through trusted courier partners.
@@ -46,7 +54,7 @@ export function AccordionDemo() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Return Policy</AccordionTrigger>
+            <AccordionTrigger>Apa saja fitur web ini?</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 We stand behind our products with a comprehensive 30-day return

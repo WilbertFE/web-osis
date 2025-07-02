@@ -79,7 +79,7 @@ export function LayoutWrapper({ username }: { username: string }) {
 
   return (
     user && (
-      <>
+      <div className="min-h-screen">
         {/* {hero} */}
         <div className="w-full flex pt-32 flex-col px-4 items-center">
           <Avatar className="w-16 h-16">
@@ -181,7 +181,7 @@ export function LayoutWrapper({ username }: { username: string }) {
             </div>
           </>
         )}
-      </>
+      </div>
     )
   );
 }
