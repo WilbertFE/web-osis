@@ -87,10 +87,10 @@ export default function Hero() {
           <Link href="https://www.instagram.com/osis.sma.methonam/">
             <FaInstagram />
           </Link>
-          <Link href="/">
+          <Link href="https://www.tiktok.com/@osismethonam">
             <FaTiktok />
           </Link>
-          <Link href="/">
+          <Link href="https://www.youtube.com/channel/UC_hg62CaMpMqtok80nzpeLA">
             <FaYoutube />
           </Link>
           <Link href="https://github.com/WilbertFE">
