@@ -26,14 +26,12 @@ export function AccordionDemo() {
             <AccordionTrigger>Apa tujuan web ini?</AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
-                Our flagship product combines cutting-edge technology with sleek
-                design. Built with premium materials, it offers unparalleled
-                performance and reliability.
+                Web ini dibuat untuk memenuhi salah satu program kerja utama
+                dari OSIS.
               </p>
               <p>
-                Key features include advanced processing capabilities, and an
-                intuitive user interface designed for both beginners and
-                experts.
+                Tujuan web ini adalah untuk membangun relasi, menjadi sarana
+                komunikasi, dan supaya dapat lebih dekat dengan teknologi.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -43,28 +41,40 @@ export function AccordionDemo() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
-                We offer worldwide shipping through trusted courier partners.
-                Standard delivery takes 3-5 business days, while express
-                shipping ensures delivery within 1-2 business days.
-              </p>
-              <p>
-                All orders are carefully packaged and fully insured. Track your
-                shipment in real-time through our dedicated tracking portal.
+                Anda harus login dulu supaya bisa mengakses fitur-fitur
+                tertentu.
               </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Apa saja fitur web ini?</AccordionTrigger>
+            <AccordionTrigger>
+              Bagaimana cara menghubungi pengurus OSIS?
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
-                We stand behind our products with a comprehensive 30-day return
-                policy. If you&apos;re not completely satisfied, simply return
-                the item in its original condition.
+                Anda bisa ke halaman contact atau melalui media sosial osis.
               </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              Apakah OSIS menerima keluhan atau aspirasi siswa secara online?
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
-                Our hassle-free return process includes free return shipping and
-                full refunds processed within 48 hours of receiving the returned
-                item.
+                Ya, anda bisa memberi keluhan atau aspirasi melalui fitur
+                Aspiration Space dan Anonymous Report Room.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger>
+              Apakah OSIS menerima saran atau ide kegiatan dari siswa?
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-4 text-balance">
+              <p>
+                Ya, anda bisa memberi keluhan atau aspirasi melalui fitur
+                Aspiration Space.
               </p>
             </AccordionContent>
           </AccordionItem>
