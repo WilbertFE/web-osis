@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <div className="flex flex-col items-center w-full gap-y-4 mt-32">
       <h1 className="text-3xl text-center tracking-wider font-bold">
-        Tentang Kami
+        TENTANG KAMI
       </h1>
       <p className="text-center text-sm text-muted-foreground tracking-wide lowercase font-light">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
