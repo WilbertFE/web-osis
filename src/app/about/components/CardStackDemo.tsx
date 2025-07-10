@@ -32,39 +32,57 @@ export const Highlight = ({
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Helend",
+    designation: "Koordinator Bidang Kepemimpinan",
     content: (
       <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
+        menurut saya OSIS adalah wadah dimana{" "}
+        <Highlight>
+          saya bisa belajar mengembangkan keterampilan dan jiwa kepemimpinan
+        </Highlight>
+        , di OSIS saya banyak belajar tentang komunikasi, berpendapat, dan
+        mengambil keputusan
       </p>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "Mazmur Cipta Uli Simanungkalit",
+    designation: "Koordinator Bidang Bela Negara",
     content: (
       <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
+        OSIS adalah organisasi resmi bagi para siswa di sekolah untuk{" "}
+        <Highlight>
+          belajar bekerjasama,berorganisasi, dan mengembangkan diri
+        </Highlight>
       </p>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "Jacob",
+    designation: "Wakil Ketua",
     content: (
       <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
+        Adalah tempat dimana siswa mampu mengasah dan{" "}
+        <Highlight>mengembangkan soft skill</Highlight>
+        dan <Highlight>mengembangkan kemampuan kerjasama</Highlight> yang
+        terstruktur dalam kelompok dengan masih memikul beban tanggung jawab.
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    name: "Queen",
+    designation: "Anggota Bidang Publikasi & Dokumentasi",
+    content: (
+      <p>
+        tanggapan saya, OSIS adalah tempat bagi para siswa untuk
+        <Highlight>
+          merepresentasikan suara mereka serta mendorong peningkatan
+          perkembangan karakter dan kepimpinan mereka
+        </Highlight>
+        .
       </p>
     ),
   },

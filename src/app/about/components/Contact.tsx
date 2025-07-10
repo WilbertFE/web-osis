@@ -1,6 +1,7 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Instagram, Mail, PhoneCall } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Contact() {
   return (
@@ -28,27 +29,30 @@ export function Contact() {
         modi.
       </p>
       <div className="flex gap-x-2 items-center w-full justify-between">
-        <div
+        <Link
+          href="mailto:methonamosis@gmail.com"
           className="flex flex-col w-1/3 items-center gap-x-2 px-1 rounded-md p-1
            bg-gray-900"
         >
           <Mail size={32} />
           <span className="text-sm font-light tracking-wider">Email</span>
-        </div>
-        <div
+        </Link>
+        <Link
+          href="https://wa.me/6281265850348?text=Halo%2C%20saya%20ingin%20bertanya."
           className="flex flex-col w-1/3 items-center gap-x-2 px-1 rounded-md p-1
            bg-gray-900"
         >
           <PhoneCall size={32} />
           <span className="text-sm font-light tracking-wider">Whatsapp</span>
-        </div>
-        <div
+        </Link>
+        <Link
+          href="https://www.instagram.com/osis.sma.methonam/"
           className="flex flex-col w-1/3 items-center gap-x-2 px-1 rounded-md p-1
            bg-gray-900"
         >
           <Instagram size={32} />
           <span className="text-sm font-light tracking-wider">Instagram</span>
-        </div>
+        </Link>
       </div>
     </div>
   );
