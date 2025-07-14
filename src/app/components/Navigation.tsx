@@ -8,6 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import { Notification } from "./Notification";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,13 +42,18 @@ export function Navigation() {
             </button>
           )}
           {status === "authenticated" && (
-            <Link href={`/${session.user.username}`}>
+            <Link className="relative" href={`/${session.user.username}`}>
               <Avatar className="w-10 h-10 border border-black">
                 <AvatarImage src={session.user?.image || ""} />
                 <AvatarFallback>WB</AvatarFallback>
               </Avatar>
+              <span className="absolute top-0 -right-1 flex size-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+              </span>
             </Link>
           )}
+          <Notification />
           <ModeToggle />
           <button
             onClick={handleClick}
@@ -99,20 +105,32 @@ export function Navigation() {
                 About
               </Link>
             </li>
-
             {status === "unauthenticated" && (
               <li>
-                <div
-                  onClick={() =>
-                    signIn("google", {
-                      callbackUrl: "/",
-                    })
-                  }
-                  className="block py-2 px-3 text-blue-600 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700"
+                <Link
+                  href="/login"
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Login
-                </div>
+                </Link>
               </li>
+            )}
+            {status === "authenticated" && (
+              <>
+                <li>
+                  <Link
+                    href={session.user.username}
+                    className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    My account
+                  </Link>
+                </li>
+                <li>
+                  <div className="block py-2 px-3 text-red-600 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-red-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                    Logout
+                  </div>
+                </li>
+              </>
             )}
           </ul>
         </div>

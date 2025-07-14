@@ -193,7 +193,12 @@ export function TimelineDemo() {
   ];
   return (
     <div className="relative w-full overflow-clip">
-      <Timeline data={data} />
+      <Timeline
+        heading="Fitur Utama Web OSIS"
+        explanation="Berikut adalah beberapa utilitas utama yang disediakan dalam website
+          ini."
+        data={data}
+      />
     </div>
   );
 }

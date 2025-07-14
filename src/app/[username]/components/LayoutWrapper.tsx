@@ -25,12 +25,14 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { GoReport } from "react-icons/go";
 import { AiOutlineSound } from "react-icons/ai";
-import Loading from "@/app/loading";
+import Image from "next/image";
+import NotFound from "@/app/not-found";
 
 export function LayoutWrapper({ username }: { username: string }) {
   const [user, setUser] = useState<null | UserData>(null);
   const [isDisabled, setIsDisabled] = useState(false);
   const { data: session, update }: any = useSession();
+  const [status, setStatus] = useState(false);
   const router = useRouter();
 
   const getUser = async (username: string) => {
@@ -38,6 +40,7 @@ export function LayoutWrapper({ username }: { username: string }) {
     if (response.status) {
       setUser(response.data);
     }
+    setStatus(true);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -77,7 +80,21 @@ export function LayoutWrapper({ username }: { username: string }) {
     getUser(username);
   }, [username]);
 
-  if (!user) return <Loading />;
+  if (!user && !status)
+    return (
+      <div className="flex flex-col justify-center items-center min-h-screen w-full">
+        <Image
+          src="/logo.png"
+          alt="logo"
+          width={132}
+          height={132}
+          className="animate-spin"
+        />
+        <span>Loading...</span>
+      </div>
+    );
+
+  if (!user && status) return <NotFound />;
 
   console.log("session : ", session);
   console.log("user : ", user);
@@ -197,7 +214,7 @@ export function LayoutWrapper({ username }: { username: string }) {
               <div className="flex flex-col border p-3 rounded-lg">
                 <div
                   className="flex gap-x-2 cursor-pointer"
-                  onClick={() => signOut({ callbackUrl: "/" })}
+                  onClick={() => signOut({ callbackUrl: "/login" })}
                 >
                   <LogOut color="#ff0000" />
                   <span className="flex-1 line-clamp-1 text-red-600">

@@ -247,7 +247,7 @@ export function AnimatedTestimonialsDemo() {
   return (
     <div className="pt-12">
       <h1 className="text-xl text-center tracking-wider font-bold">Anggota</h1>
-      <AnimatedTestimonials testimonials={testimonials} />
+      <AnimatedTestimonials autoplay testimonials={testimonials} />
     </div>
   );
 }

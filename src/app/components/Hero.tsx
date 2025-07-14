@@ -78,7 +78,7 @@ export default function Hero() {
           ))}
         </div>
         <div className="my-2"></div>
-        <Link href="/about#contact">
+        <Link href="/about">
           <button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] cursor-pointer hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-bold transition duration-200 ease-linear">
             <TypewriterEffect words={words} />
           </button>
@@ -93,7 +93,7 @@ export default function Hero() {
           <Link href="https://www.youtube.com/channel/UC_hg62CaMpMqtok80nzpeLA">
             <FaYoutube />
           </Link>
-          <Link href="https://github.com/WilbertFE">
+          <Link href="https://github.com/WilbertFE/web-osis">
             <FaGithub />
           </Link>
         </div>

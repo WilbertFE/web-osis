@@ -29,7 +29,7 @@ export default function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <Link
-                    href="https://github.com/WilbertFE"
+                    href="https://github.com/WilbertFE/web-osis"
                     className="hover:underline "
                   >
                     Github
@@ -83,7 +83,7 @@ export default function Footer() {
             <Link href="https://www.youtube.com/channel/UC_hg62CaMpMqtok80nzpeLA">
               <FaYoutube />
             </Link>
-            <Link href="https://github.com/WilbertFE">
+            <Link href="https://github.com/WilbertFE/web-osis">
               <FaGithub />
             </Link>
           </div>
