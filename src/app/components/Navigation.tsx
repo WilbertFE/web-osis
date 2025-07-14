@@ -42,10 +42,6 @@ export function Navigation() {
           )}
           {status === "authenticated" && (
             <Link href={`/${session.user.username}`}>
-              <span className="relative -right-7 -bottom-3 z-[1] flex size-3 p-0">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
-              </span>
               <Avatar className="w-10 h-10 border border-black">
                 <AvatarImage src={session.user?.image || ""} />
                 <AvatarFallback>WB</AvatarFallback>

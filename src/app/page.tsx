@@ -6,6 +6,7 @@ import { ThreeDMarqueeDemoSecond } from "./components/ThreeDMarqueeDemoSecond";
 import { TimelineDemo } from "./components/TimelineDemo";
 
 export default function Home() {
+  console.log("oke");
   return (
     <>
       <ThreeDMarqueeDemoSecond />

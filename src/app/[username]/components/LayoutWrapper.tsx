@@ -25,14 +25,13 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { GoReport } from "react-icons/go";
 import { AiOutlineSound } from "react-icons/ai";
+import Loading from "@/app/loading";
 
 export function LayoutWrapper({ username }: { username: string }) {
   const [user, setUser] = useState<null | UserData>(null);
   const [isDisabled, setIsDisabled] = useState(false);
   const { data: session, update }: any = useSession();
   const router = useRouter();
-
-  console.log("session : ", session);
 
   const getUser = async (username: string) => {
     const response = await getUserByUsername(username);
@@ -78,6 +77,9 @@ export function LayoutWrapper({ username }: { username: string }) {
     getUser(username);
   }, [username]);
 
+  if (!user) return <Loading />;
+
+  console.log("session : ", session);
   console.log("user : ", user);
 
   return (
