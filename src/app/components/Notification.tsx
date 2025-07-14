@@ -41,7 +41,8 @@ export function Notification() {
               14 Juli 2025
             </span>
             <p className="lowercase font-light">
-              Website dipublikasikan dan diumukan.
+              Website dipublikasikan dan diumukan. Website masih akan
+              dikembangkan.
             </p>
           </div>
           <Separator />

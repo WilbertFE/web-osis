@@ -17,14 +17,14 @@ export function AnimatedTestimonialsDemo() {
       quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       name: "Wilbert Bernardi",
       designation: "Ketua",
-      src: "https://github.com/shadcn.png",
+      src: "/person/wilbert.png",
     },
     {
       quote:
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       name: "Jacob Martua Haganta Simorangkir",
       designation: "Wakil Ketua",
-      src: "https://github.com/shadcn.png",
+      src: "/person/jacob.jpeg",
     },
     {
       quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
