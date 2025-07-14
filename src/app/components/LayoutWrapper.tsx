@@ -14,9 +14,11 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
-          {children}
-          <Footer />
+          <>
+            <Navigation />
+            {children}
+            <Footer />
+          </>
         </ThemeProvider>
       </SessionProvider>
     </>

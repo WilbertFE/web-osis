@@ -42,7 +42,11 @@ export function Navigation() {
           )}
           {status === "authenticated" && (
             <Link href={`/${session.user.username}`}>
-              <Avatar className="w-10 h-10">
+              <span className="relative -right-7 -bottom-3 z-[1] flex size-3 p-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+              </span>
+              <Avatar className="w-10 h-10 border border-black">
                 <AvatarImage src={session.user?.image || ""} />
                 <AvatarFallback>WB</AvatarFallback>
               </Avatar>
@@ -85,7 +89,7 @@ export function Navigation() {
             <li>
               <Link
                 href="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 aria-current="page"
               >
                 Home
@@ -99,14 +103,7 @@ export function Navigation() {
                 About
               </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Services
-              </a>
-            </li>
+
             {status === "unauthenticated" && (
               <li>
                 <div
