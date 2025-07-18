@@ -2,24 +2,39 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function AvatarDemo() {
   return (
-    <div className="flex flex-row flex-wrap items-center gap-12 mx-auto my-4">
-      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        <Avatar>
-          <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
-          <AvatarFallback>LR</AvatarFallback>
-        </Avatar>
-        <Avatar>
-          <AvatarImage
-            src="https://github.com/evilrabbit.png"
-            alt="@evilrabbit"
-          />
-          <AvatarFallback>ER</AvatarFallback>
-        </Avatar>
-      </div>
+    <div className="flex justify-center my-4 gap-x-2">
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
+          src="/person/wilbert.png"
+          alt="@wilbert"
+        />
+        <AvatarFallback>PS</AvatarFallback>
+      </Avatar>
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
+          src="/person/purna.jpeg"
+          alt="@purna"
+        />
+        <AvatarFallback>PS</AvatarFallback>
+      </Avatar>
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
+          src="/person/adel.jpeg"
+          alt="@adelyn"
+        />
+        <AvatarFallback>AJ</AvatarFallback>
+      </Avatar>
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
+          src="/person/jacob.jpeg"
+          alt="@jacob"
+        />
+        <AvatarFallback>AJ</AvatarFallback>
+      </Avatar>
     </div>
   );
 }
