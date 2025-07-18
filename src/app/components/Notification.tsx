@@ -46,6 +46,18 @@ export function Notification() {
             </p>
           </div>
           <Separator />
+          <div className="px-4 py-2">
+            <h1 className="font-medium tracking-wide">
+              Halaman Dokumentasi Ditambahkan
+            </h1>
+            <span className="text-sm font-light text-muted-foreground">
+              18 Juli 2025
+            </span>
+            <p className="lowercase font-light">
+              Halaman untuk mengakses link google drive dokumentasi terkhusus
+              tahun 2024-2025 dibuat.
+            </p>
+          </div>
         </div>
         <SheetFooter>
           <SheetClose asChild>
