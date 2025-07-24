@@ -2,14 +2,22 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function AvatarDemo() {
   return (
-    <div className="flex justify-center my-4 gap-x-2">
+    <div className="flex flex-wrap gap-y-4 justify-center my-4 gap-x-2">
       <Avatar className="w-16 h-16">
         <AvatarImage
           className="object-cover"
           src="/person/wilbert.png"
           alt="@wilbert"
         />
-        <AvatarFallback>PS</AvatarFallback>
+        <AvatarFallback>WB</AvatarFallback>
+      </Avatar>
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
+          src="/person/queen.jpeg"
+          alt="@queen"
+        />
+        <AvatarFallback>QC</AvatarFallback>
       </Avatar>
       <Avatar className="w-16 h-16">
         <AvatarImage
@@ -30,10 +38,18 @@ export function AvatarDemo() {
       <Avatar className="w-16 h-16">
         <AvatarImage
           className="object-cover"
+          src="/person/jeremi.jpeg"
+          alt="@jeremi"
+        />
+        <AvatarFallback>JS</AvatarFallback>
+      </Avatar>
+      <Avatar className="w-16 h-16">
+        <AvatarImage
+          className="object-cover"
           src="/person/jacob.jpeg"
           alt="@jacob"
         />
-        <AvatarFallback>AJ</AvatarFallback>
+        <AvatarFallback>JS</AvatarFallback>
       </Avatar>
     </div>
   );

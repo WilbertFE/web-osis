@@ -51,7 +51,7 @@ export function Notification() {
               Halaman Dokumentasi Ditambahkan
             </h1>
             <span className="text-sm font-light text-muted-foreground">
-              18 Juli 2025
+              24 Juli 2025
             </span>
             <p className="lowercase font-light">
               Halaman untuk mengakses link google drive dokumentasi terkhusus
