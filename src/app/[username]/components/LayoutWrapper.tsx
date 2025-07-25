@@ -18,7 +18,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, LogOut, MoveRight, SquareUserRound } from "lucide-react";
+import {
+  BookText,
+  Loader2,
+  LogOut,
+  MoveRight,
+  SquareUserRound,
+} from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -186,7 +192,7 @@ export function LayoutWrapper({ username }: { username: string }) {
             </div>
 
             <div className="w-full flex flex-col px-4 gap-y-2">
-              <span>Profile</span>
+              <span>Fitur</span>
               <Link
                 href="/report"
                 className="flex flex-col border p-3 rounded-lg"
@@ -204,6 +210,18 @@ export function LayoutWrapper({ username }: { username: string }) {
                 <div className="flex gap-x-2 cursor-pointer">
                   <AiOutlineSound size={20} />
                   <span className="flex-1 line-clamp-1">Aspiration Space</span>
+                  <MoveRight />
+                </div>
+              </Link>
+              <Link
+                href="/documentations"
+                className="flex flex-col border p-3 rounded-lg"
+              >
+                <div className="flex gap-x-2 cursor-pointer">
+                  <BookText size={20} />
+                  <span className="flex-1 line-clamp-1">
+                    Documentations Room
+                  </span>
                   <MoveRight />
                 </div>
               </Link>
